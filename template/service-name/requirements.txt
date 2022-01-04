@@ -1,0 +1,6 @@
+--index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+--extra-index-url https://mirrors.aliyun.com/pypi/simple/
+
+fastapi==0.65.2
+uvicorn==0.14.0
+APScheduler==3.8.0
