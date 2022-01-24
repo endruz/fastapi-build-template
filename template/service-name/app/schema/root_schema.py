@@ -20,6 +20,6 @@ class RootRes(BaseModel):
         ...,
         alias="maintainer",
         title="维护者",
-        description="维护者信息: 姓名(邮箱)",
-        example=["zhangsan(zhangsan@email.com)"],
+        description="维护者信息: 姓名 <邮箱>",
+        example=["zhangsan <zhangsan@email.com>"],
     )
