@@ -23,7 +23,7 @@ async def cleanup_tmp():
         delta = current_time - file_create_time
         days = delta.days
         seconds = delta.seconds
-        total_minute = days * 24 * 60 + round(seconds / 60)
+        total_minute = days * 24 * 60 + seconds / 60
         # 删除创建时间大于 15 分钟的文件
         if total_minute > 15:
             try:
