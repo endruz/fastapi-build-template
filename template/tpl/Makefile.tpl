@@ -17,9 +17,9 @@ Target:
 	lint            check python code
 	format          format python code
 	build           build service env
-	start           startup service
+	run             startup service
 	build-docker    build docker image
-	start-docker    run docker container
+	run-docker      run docker container
 	help            show this help info
 
 Example:
@@ -28,9 +28,9 @@ Example:
 	make lint
 	make format
 	make build
-	make start
+	make run
 	make build-docker
-	make start-docker
+	make run-docker
 	make help
 endef
 
@@ -65,8 +65,8 @@ build:
 	@echo "start to build service env ..."
 	$(BUILD_PATH)/lib/build.sh
 
-.PHONY: start
-start: clean
+.PHONY: run
+run: clean
 	@echo "start to startup service ..."
 	cd $(SRC_PATH) && ./run.sh
 
@@ -75,7 +75,7 @@ build-docker: clean
 	@echo "start to build docker ..."
 	$(BUILD_PATH)/lib/build_image.sh
 
-.PHONY: start-docker
-start-docker:
+.PHONY: run-docker
+run-docker:
 	@echo "start to run docker ..."
 	$(BUILD_PATH)/lib/run_container.sh

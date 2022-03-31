@@ -10,9 +10,9 @@
     - [make lint](#make-lint)
     - [make format](#make-format)
     - [make build](#make-build)
-    - [make start](#make-start)
+    - [make run](#make-run)
     - [make build-docker](#make-build-docker)
-    - [make start-docker](#make-start-docker)
+    - [make run-docker](#make-run-docker)
     - [make help](#make-help)
   - [模板项目其他功能](#模板项目其他功能)
     - [图片去重](#图片去重)
@@ -136,9 +136,9 @@ Target:
         lint            check python code
         format          format python code
         build           build service env
-        start           startup service
+        run             startup service
         build-docker    build docker image
-        start-docker    run docker container
+        run-docker      run docker container
         help            show this help info
 
 Example:
@@ -147,9 +147,9 @@ Example:
         make lint
         make format
         make build
-        make start
+        make run
         make build-docker
-        make start-docker
+        make run-docker
         make help
 ```
 
@@ -177,7 +177,7 @@ Example:
 
 > **注：** 项目 build 若存在额外操作，可在 `output/build/lib/build.sh` 的 `extra_operation` 中添加相关操作。
 
-### make start
+### make run
 
 本地启动服务。
 
@@ -199,7 +199,7 @@ Example:
 
 > **注：** Dockerfile 的内容可根据实际情况进行修改。
 
-### make start-docker
+### make run-docker
 
 启动 Docker 容器，配置文件 `output/build/config` 以 *key=value* 形式提供如下启动配置：
 
@@ -213,12 +213,12 @@ Example:
 | IS_CLEANUP_TMP  | 是否清理临时文件             | 可选项为 YES 和 NO，默认值为 YES               |
 | WEB_CONCURRENCY | uvicorn 的 worker 进程的数量 | 默认值为 1                                     |
 
-执行 `make start-docker` 命令时，会显示当前配置下 Docker 容器启动命令，为后续单独部署提供参考。
+执行 `make run-docker` 命令时，会显示当前配置下 Docker 容器启动命令，为后续单独部署提供参考。
 
 命令输出内容如下所示：
 
 ```bash
-output$ make start-docker
+output$ make run-docker
 start to run docker ...
 /root/fastapi_build_template/output/build/lib/run_container.sh
 info: parse build config ...
