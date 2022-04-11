@@ -48,8 +48,8 @@ generate_build_config()
     local dockerfile_file="$OUTPUT_DIR/build/docker/Dockerfile"
     sed -e "s/@SERVICE_NAME@/$SERVICE_NAME/g" $dockerfile_tpl > $dockerfile_file || return
 
-    local cybuild_dockerfile_tpl="$OUTPUT_DIR/tpl/cybuild.Dockerfile.tpl"
-    local cybuild_dockerfile_file="$OUTPUT_DIR/build/docker/cybuild.Dockerfile"
+    local cybuild_dockerfile_tpl="$OUTPUT_DIR/tpl/Dockerfile.cybuild.tpl"
+    local cybuild_dockerfile_file="$OUTPUT_DIR/build/docker/Dockerfile.cybuild"
     sed -e "s/@SERVICE_NAME@/$SERVICE_NAME/g" $cybuild_dockerfile_tpl > $cybuild_dockerfile_file || return
 
     local run_container_tpl="$OUTPUT_DIR/tpl/run_container.sh.tpl"

@@ -98,7 +98,7 @@ output/
 │   ├── config ----------------------- 项目构建配置文件
 │   ├── docker ======================= 项目 Dockerfile 存放目录
 │   │   ├── Dockerfile --------------- 镜像构建 Dockerfile
-│   │   └── cybuild.Dockerfile ------- Cython 加密镜像构建 Dockerfile
+│   │   └── Dockerfile.cybuild ------- Cython 加密镜像构建 Dockerfile
 │   └── lib ========================== 项目构建库目录
 │       ├── build.sh ----------------- 构建运行环境脚本
 │       ├── build_image.sh ----------- 构建 docker 镜像脚本
@@ -195,7 +195,7 @@ Example:
 
 若配置文件中 `ENABLE_ENCRYPT` 为 NO，则使用 `output/build/docker/Dockerfile` 进行构建；
 
-若配置文件中 `ENABLE_ENCRYPT` 为 YES，则使用 `output/build/docker/cybuild.Dockerfile` 进行构建。
+若配置文件中 `ENABLE_ENCRYPT` 为 YES，则使用 `output/build/docker/Dockerfile.cybuild` 进行构建。
 
 > **注：** Dockerfile 的内容可根据实际情况进行修改。
 

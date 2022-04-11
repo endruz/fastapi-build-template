@@ -52,7 +52,7 @@ build_image()
     local image_name="$IMAGE_NAME:$IMAGE_TAG"
 
     if [[ $ENABLE_ENCRYPT && "$ENABLE_ENCRYPT" = "YES" ]]; then
-        dockerfile="$BUILD_DIR/docker/cybuild.Dockerfile"
+        dockerfile="$BUILD_DIR/docker/Dockerfile.cybuild"
     else
         dockerfile="$BUILD_DIR/docker/Dockerfile"
     fi

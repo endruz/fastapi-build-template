@@ -13,7 +13,7 @@ check_files()
     local build_config_tpl="$TEMPLATE_DIR/tpl/config.tpl"
     local dockerignore_tpl="$TEMPLATE_DIR/tpl/dockerignore.tpl"
     local dockerfile_tpl="$TEMPLATE_DIR/tpl/Dockerfile.tpl"
-    local cybuild_dockerfile_tpl="$TEMPLATE_DIR/tpl/cybuild.Dockerfile.tpl"
+    local cybuild_dockerfile_tpl="$TEMPLATE_DIR/tpl/Dockerfile.cybuild.tpl"
     local run_container_tpl="$TEMPLATE_DIR/tpl/run_container.sh.tpl"
     local build_tpl="$TEMPLATE_DIR/tpl/build.sh.tpl"
     local makefile_tpl="$TEMPLATE_DIR/tpl/Makefile.tpl"
