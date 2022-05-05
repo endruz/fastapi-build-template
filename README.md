@@ -1,6 +1,6 @@
-# fastapi_build_template
+# fastapi-build-template
 
-- [fastapi_build_template](#fastapi_build_template)
+- [fastapi-build-template](#fastapi-build-template)
   - [配置文件](#配置文件)
   - [生成模板](#生成模板)
   - [模板目录结构](#模板目录结构)
@@ -23,7 +23,7 @@
 
 ## 配置文件
 
-配置文件路径为 `fastapi_build_template/config`，以 *key=value* 形式提供如下配置：
+配置文件路径为 `fastapi-build-template/config`，以 *key=value* 形式提供如下配置：
 
 | 配置名       | 说明     | 备注                                                                               |
 | :----------- | :------- | :--------------------------------------------------------------------------------- |
@@ -123,7 +123,7 @@ output/
 
 ## 模板项目相关命令
 
-模板项目（即 fastapi_build_template 构建的项目）的命令如下所示：
+模板项目（即 fastapi-build-template 构建的项目）的命令如下所示：
 
 ```bash
 output$ make
@@ -153,7 +153,7 @@ Example:
         make help
 ```
 
-> **注：** fastapi_build_template 构建的项目仅支持 Python 3.7+ 版本。
+> **注：** fastapi-build-template 构建的项目仅支持 Python 3.7+ 版本。
 
 ### make init
 
@@ -220,7 +220,7 @@ Example:
 ```bash
 output$ make run-docker
 start to run docker ...
-/root/fastapi_build_template/output/build/lib/run_container.sh
+/root/fastapi-build-template/output/build/lib/run_container.sh
 info: parse build config ...
 info: run docker container ...
 + docker run -d --name ai-service --restart=always -p 8080:8080 -e WEB_CONCURRENCY=1 ai-service:latest
