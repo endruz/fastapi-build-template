@@ -9,4 +9,5 @@ EMAIL=zhangsan@email.com,lisi@email.com
 # 输出路径，绝对路径和相对路径均可
 # 默认值为当前目录下的 output 文件夹
 # 若路径不存在会自动创建
+# 若路径存在会先清空文件夹内容再构建输出
 OUTPUT_DIR=
