@@ -1,16 +1,10 @@
 FROM python:3.7 as builder
 
 WORKDIR /
+
 COPY . /
 
-# Cython 当前最新的正式版本 0.29.24 对协程的支持存在问题(https://github.com/cython/cython/pull/3427)。
-# 该问题在测试版本 3.0.0a9 中已修复。
-ADD https://github.com/cython/cython/archive/refs/tags/3.0.0a9.tar.gz /
-
-RUN tar -xf 3.0.0a9.tar.gz && \
-    cd cython-3.0.0a9 && \
-    python setup.py build && \
-    python setup.py install && \
+RUN pip install cython==3.0.0a11 -i https://pypi.tuna.tsinghua.edu.cn/simple/ && \
     python /build/lib/cybuild.py /@SERVICE_NAME@ \
     --clean \
     --execution_file /@SERVICE_NAME@/main.py \
