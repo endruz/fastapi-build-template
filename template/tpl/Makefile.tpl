@@ -49,6 +49,8 @@ init:
 clean:
 	@echo "start to cleanup ..."
 	find $(SRC_PATH) -name "__pycache__" -type d | xargs rm -rf
+	find $(SRC_PATH) -name "*.c" -type f -exec rm -f {} \;
+	find $(SRC_PATH) -name "*.so" -type f -exec rm -f {} \;
 
 .PHONY: lint
 lint:
